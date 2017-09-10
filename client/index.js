@@ -13,7 +13,7 @@ const render = (Component) => {
 	);
 };
 
-render(app);
+render(App);
 
 if(module.hot) {
 	module.hot.accept('./App', () => {

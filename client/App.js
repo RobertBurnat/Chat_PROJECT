@@ -8,9 +8,9 @@ import MessageList from './MessageList';
 import UsersList from './UsersList';
 import UserForm from './UserForm';
 
-const socket = io('/');
+const socket = io('http://localhost:3000');
 
-class App extends Component {
+class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {users: [], messages: [], text: '', name: ''};
