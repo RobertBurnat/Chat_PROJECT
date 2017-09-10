@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
+const path = require('path');
 ////console.log('NODE_ENV:', env);
 //const path = require('path');
 var env = process.env.NODE_ENV || 'development';
@@ -16,15 +17,13 @@ new HtmlWebpackPlugin({
 console.log('NODE_ENV:', env);
 
 if (env === 'production') {
-plugins.push(
+plugins.push(   
     new webpack.optimize.UglifyJsPlugin(),
     new OptimizeJsPlugin({
       sourceMap: false
     })
   );
 }
-
-
 
 module.exports = {
     entry: [
@@ -35,7 +34,7 @@ module.exports = {
     ],
      output: {
         filename: './bundle.js',
-        path: path.resolve(__dirname, '/public')
+        path: path.resolve(__dirname, './public')
      },
      module: {
         rules: [
