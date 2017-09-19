@@ -2,10 +2,10 @@
 Chat Project used Technologies : ExpressJS, NodeJS, Webpack, ReactJS
 
 npms to install :
-express 
-socket.io 
-babel-core
-babel-loader 
+# express 
+# socket.io 
+# babel-core
+# babel-loader 
 babel-preset-es2015
 babel-preset-react
 babel-preset-stage-2 
